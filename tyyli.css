@@ -1,0 +1,186 @@
+/*muuttujat*/
+
+:root {
+    --paavari: rgb(225, 37, 40);
+    --tehostevari: blue;
+    --tekstivari: black;
+    --taustavari: rgb(255, 255, 255);
+    --logo: rgb(0, 0, 0);
+}
+
+/* kaikille yhteiset koodit */
+
+body {
+    background-color: var(--taustavari);
+    color: var(--tekstivari);
+    font-family: Roboto, sans-serif;
+}
+
+
+h1 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: em;
+    color: var(--paavari);
+
+}
+
+h2 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+h3 {
+    text-align: left;
+}
+
+.logo {
+    vertical-align: middle;
+}
+
+h4 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: var(--paavari);
+    background-color: var(--paavari);
+}
+
+h5 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.6em;
+    color: var(--logo);
+}
+
+h6 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: var(--logo);
+}
+
+h7 {
+    font-family: "Staatliches", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: var(--logo);
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+/* navigointi */
+#topnav a {
+    text-decoration: none;
+    color: var(--tekstivari)
+}
+
+#topnav li {
+    display: inline-grid;
+    padding-left: 90px;
+    padding-right: 40px;
+}
+
+#topnav ul {
+    padding-left: 0px;
+}
+
+/* navigointi loppuu */
+
+.korostus {
+    color: var(--tekstivari)
+}
+
+.tuotekuva {
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: auto
+}
+
+/* yhteystiedot -sivu */
+
+#aukioloajat li {
+    list-style-type: none;
+}
+
+#aukioloajat span {
+    width: 6em;
+    display: inline-block;
+}
+
+
+/*
+div p {background-color:  aqua;
+       padding: 20px;
+       margin-left: 20%;
+       border:solid blue 5px }
+*/
+
+/* mobiili */
+@media only screen and (max-width:440px) {
+
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #topnav li {
+        display: block;
+        text-align: left;
+    }
+
+    #topnav a {
+        font-size: 2em;
+    }
+
+    #topnav ul {
+        border-bottom: 1px solid var(--paavari)
+    }
+
+}
+
+@media only screen and (min-width:441px) {
+
+    .flex_container {
+        display: flex;
+    }
+
+    .leivonnaiset {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex_item {
+        flex: 1
+    }
+
+    .leivonnaiset .flex_item {
+        flex: 0 0 300px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        width: 1200px;
+        border: solid 1px var(--tehostevari);
+        margin: auto;
+        padding: 0 10px 0 10px;
+    }
+
+}
